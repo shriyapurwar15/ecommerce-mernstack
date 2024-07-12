@@ -1,6 +1,6 @@
 export function addToCart(item) {
   return new Promise(async(resolve) =>{
-  const response = await fetch('http://localhost:8080/cart',{
+  const response = await fetch('https://ecommerce-mernstack-nhzt.onrender.com/cart',{
     method: 'POST',
     body: JSON.stringify(item),
     headers:{
@@ -15,7 +15,7 @@ export function addToCart(item) {
 
 export function update(update) {
   return new Promise(async(resolve) =>{
-  const response = await fetch('http://localhost:8080/cart/'+update.id,{
+  const response = await fetch('https://ecommerce-mernstack-nhzt.onrender.com/cart/'+update.id,{
     method: 'PATCH',
     body: JSON.stringify(update),
     headers:{
@@ -29,7 +29,7 @@ export function update(update) {
 } 
 export function deleteItemsFromCart(itemId) {
   return new Promise(async(resolve) =>{
-  const response = await fetch('http://localhost:8080/cart/'+itemId,{
+  const response = await fetch('https://ecommerce-mernstack-nhzt.onrender.com/cart/'+itemId,{
     method: 'DELETE',
     headers:{
       'content-type': 'application/json',
@@ -43,7 +43,7 @@ export function deleteItemsFromCart(itemId) {
 
 export function fetchItemsByUserId() {
   return new Promise(async(resolve) =>{
-  const response = await fetch('http://localhost:8080/cart',
+  const response = await fetch('https://ecommerce-mernstack-nhzt.onrender.com/cart',
   {
     method: "GET",
     headers: {

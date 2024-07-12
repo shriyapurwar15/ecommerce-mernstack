@@ -1,6 +1,6 @@
 export function fetchLoggedInUserOrders() {
   return new Promise(async (resolve) =>{
-    const response = await fetch('http://localhost:8080/orders/own',
+    const response = await fetch('https://ecommerce-mernstack-nhzt.onrender.com/orders/own',
     {
       method: "GET",
       headers: {
@@ -13,7 +13,7 @@ export function fetchLoggedInUserOrders() {
 }
 export function fetchLoggedInUser() {
   return new Promise(async (resolve) =>{
-    const response = await fetch('http://localhost:8080/users/own',
+    const response = await fetch('https://ecommerce-mernstack-nhzt.onrender.com/users/own',
     {
       method: "GET",
       headers: {
@@ -27,7 +27,7 @@ export function fetchLoggedInUser() {
 
 export function updateUser(update) {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/users/"+update.id, {
+    const response = await fetch("https://ecommerce-mernstack-nhzt.onrender.com/users/"+update.id, {
       method: "PATCH",
       body: JSON.stringify(update),
       headers: {

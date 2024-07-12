@@ -18,7 +18,7 @@ export function fetchProductsByFilters(filter, sort, pagination) {
 
   return new Promise(async (resolve) => {
     const response = await fetch(
-      "http://localhost:8080/products?" + queryString,
+      "https://ecommerce-mernstack-nhzt.onrender.com/products?" + queryString,
       {
         method: "GET",
         headers: {
@@ -36,7 +36,7 @@ export function fetchProductsByFilters(filter, sort, pagination) {
 export function fetchCategories() {
   return new Promise(async (resolve) => {
     const response = await fetch(
-      "http://localhost:8080/categories",
+      "https://ecommerce-mernstack-nhzt.onrender.com/categories",
       {
         method: "GET",
         headers: {
@@ -52,7 +52,7 @@ export function fetchCategories() {
 export function fetchBrands() {
   return new Promise(async (resolve) => {
     const response = await fetch(
-      "http://localhost:8080/brands",
+      "https://ecommerce-mernstack-nhzt.onrender.com/brands",
       {
         method: "GET",
         headers: {
@@ -69,7 +69,7 @@ export function fetchProductById(id) {
   return new Promise(async (resolve) => {
     //TODO: we will not hard-code server URL here
     const response = await fetch(
-      "http://localhost:8080/products/" + id,
+      "https://ecommerce-mernstack-nhzt.onrender.com/products/" + id,
       {
         method: "GET",
         headers: {
@@ -85,7 +85,7 @@ export function fetchProductById(id) {
 export function createProduct(productData) {
   return new Promise(async (resolve) => {
     const response = await fetch(
-      "http://localhost:8080/products",
+      "https://ecommerce-mernstack-nhzt.onrender.com/products",
       {
         method: "POST",
         body: JSON.stringify(productData),
@@ -103,7 +103,7 @@ export function createProduct(productData) {
 export function updateProduct(update) {
   return new Promise(async (resolve) => {
     const response = await fetch(
-      "http://localhost:8080/products/" + update.id,
+      "https://ecommerce-mernstack-nhzt.onrender.com/products/" + update.id,
       {
         method: "PATCH",
         body: JSON.stringify(update),
